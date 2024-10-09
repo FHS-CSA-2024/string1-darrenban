@@ -232,7 +232,9 @@ public class String1
         String bFirstChar = "";
         
         aLastChar = a.substring(a.length()-1);
-        bFirstChar = b.substring(0, 1);
+        if(b.length() >= 1){
+            bFirstChar = b.substring(0, 1);   
+        }
         
         if(aLastChar.equals(bFirstChar)){
             output = a + b.substring(1);
