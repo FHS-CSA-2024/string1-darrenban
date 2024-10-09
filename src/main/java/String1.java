@@ -237,10 +237,13 @@ public class String1
         if(aLastChar.equals(bFirstChar)){
             output = a + b.substring(1);
         }
-        else{
+        else if(a.length() >= 2 && b.length() >= 2){
             output = a + b;
         }
-        
+        else{
+            output = a;
+        }
+
         return output;
     }
 
@@ -266,7 +269,7 @@ public class String1
             output = a.substring(a.length() - getCharB) + b;
         }
         else{
-            output = a + b.substring(b.length() - getCharB);
+            output = a + b.substring(getCharB - getCharA);
         }
         return output;
     }
